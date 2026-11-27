@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Form Validation</h1>
+
+    <form onsubmit="return validateForm()">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+
+        <label for="mobile">Phone No:</label>
+        <input type="tel" id="mobile" name="phone">
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        function validateName(name) {
+
+            if (name == null || name.trim() == "") {
+                alert("Name must not be blank");
+                return false;
+            }
+
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters long!!");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateForm() {
+
+            var name = document.getElementById("name").value.trim();
+            var mobile = document.getElementById("mobile").value.trim();
+            var email = document.getElementById("email").value.trim();
+
+            if (!validateName(name)) {
+                return false;
+            }
+
+            if (mobile.length != 10) {
+                alert("Mobile number must contain 10 digits!!");
+                return false;
+            }
+
+            for (var i = 0; i < mobile.length; i++) {
+
+                if (mobile[i] < '0' || mobile[i] > '9') {
+                    alert("Mobile number must contain digits only!!");
+                    return false;
+                }
+            }
+
+            if (email == "") {
+                alert("Email ID can't be blank");
+                return false;
+            }
+
+            function validateEmail(email){
+                var reg=new RegExp("^[a-zA-Z0-9]+@[a-zA-Z0-9]+$");
+                if(!reg.test(email)){
+                    alert("invaild e-mail Address");
+                    return false;
+                }
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html><style>
+
+    .highlight-border{
+        border:5px solid green;
+        border-radius: 8px;
+    }
+</style>
+   
+
+    <body>
+        <h1> image boder</h1>
+        <img id="photo" src="cute pic.jpg" height="200" width="100" alt="image  pic">
+        <br>
+        <br>
+        <button id="addBorderBtn">Add Border</button>
+        <script>
+            document.getElementById("addBorderBtn").addEventListener("click",function(){
+                const image=document.getElementById("photo");
+                image.style.border="4px solid red";
+            });
+            </script>
+    </body>
+    </html>

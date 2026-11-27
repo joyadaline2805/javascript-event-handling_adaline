@@ -1,0 +1,35 @@
+
+<!DOCTYPE >
+<html>
+<head>
+    <title>Change Background Color</title>
+
+    <style>
+        button {
+            background-color: rgb(136, 180, 224);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Change Background Color</h2>
+
+    <button id="actionButton">Click Me</button>
+
+    <script>
+        const button = document.getElementById("actionButton");
+
+        function changeColor() {
+            document.body.style.backgroundColor = "pink";
+        }
+
+        button.addEventListener("click", changeColor);
+    </script>
+
+</body>
+</html>

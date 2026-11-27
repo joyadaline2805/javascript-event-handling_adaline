@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+    <head><style>
+
+    .highlight-border{
+        border:5px solid rgb(32, 119, 165);
+        border-radius: 8px;
+    }
+</style>
+</head>
+   
+
+    <body>
+        <h1> image border</h1>
+        <img id="photo" src="cute pic.jpg" height="200" width="100" alt="image  pic">
+        <img id="photo1" src="images.jpg" height="200" width="100" allt="image ">
+        <br>
+        <br>
+        <button id="BorderBtn">Togger Border</button>
+        <script>
+            const btn=document.getElementById("BorderBtn");
+            const img1=document.getElementById("photo");
+            const img2=document.getElementById("photo1");
+            btn.addEventListener('click',function(){
+                img1.classList.toggle("highlight-border");
+                img2.classList.toggle("highlight-border");
+            });
+           
+            
+            </script>
+    </body>
+    </html>
